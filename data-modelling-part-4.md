@@ -15,9 +15,15 @@
 
 3.  Who wrote the article called 'Coding Bootcamps and Emotional Labor'?
 
+    SELECT author_id FROM articles WHERE title='Coding Bootcamps and Emotional Labor';
+    SELECT name FROM authors WHERE id='4';
+    => Tilde Ann Thurium
 
 4.  Write a series of SQL queries to find out how many provinces are in Canada.
 
+    SELECT id FROM countries WHERE name='Canada';
+    SELECT COUNT(name) FROM provinces WHERE country_id='1';
+    => 14
 
 5.  How many people live at 4740 McDermott Street?
 
