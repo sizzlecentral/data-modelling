@@ -27,12 +27,19 @@
 
 5.  How many people live at 4740 McDermott Street?
 
+    SELECT id FROM residences WHERE address='4740 McDermott Street';
+    SELECT name FROM persons WHERE residence_id='9';
+    => Malvina King, Theo Wolff
 
 6.  What city is 4740 McDermott Street in?
 
+    SELECT city_id FROM residences WHERE address='4740 McDermott Street';
+    SELECT name FROM cities WHERE id='11';
+    => Ottawa
 
 7.  What province is 4740 McDermott Street in?
 
+    
 
 8.  What country is 4740 McDermott Street in?
 
