@@ -39,12 +39,27 @@
 
 7.  What province is 4740 McDermott Street in?
 
-    
+    SELECT province_id FROM cities WHERE name='Ottawa';
+    SELECT name FROM provinces WHERE id='14';
+    => Ontario
 
 8.  What country is 4740 McDermott Street in?
 
+    SELECT country_id FROM provinces WHERE name='Ontario';
+    SELECT name FROM countries WHERE id='1';
+    => Canada
 
 9.  Find the person named 'Destini Davis' and then use a series of SQL queries to find what country they live in.
 
+    SELECT residence_id FROM persons WHERE name='Destini Davis';
+    SELECT city_id FROM residences WHERE id='2';
+    SELECT province_id FROM cities WHERE id='8';
+    SELECT country_id FROM provinces WHERE id='14';
+    SELECT name FROM countries WHERE id='1';
+    => Canada
 
 10.  How many articles has Aditya Mukerjee written?
+
+    SELECT id FROM authors WHERE name='Aditya Mukerjee';
+    SELECT COUNT(title) FROM articles WHERE author_id='2';
+    => 1
